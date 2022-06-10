@@ -1,23 +1,23 @@
 <?php
 
-namespace {{BPREPLACENAMESPACE}}\Module;
+namespace ModularityProducts\Module;
 
-use {{BPREPLACENAMESPACE}}\Helper\CacheBust;
+use ModularityProducts\Helper\CacheBust;
 
 /**
- * Class {{BPREPLACESLUGCAMELCASE}}
- * @package {{BPREPLACESLUGCAMELCASE}}\Module
+ * Class Products
+ * @package Products\Module
  */
-class {{BPREPLACESLUGCAMELCASE}} extends \Modularity\Module
+class Products extends \Modularity\Module
 {
-    public $slug = '{{BPREPLACESLUG}}';
+    public $slug = 'products';
     public $supports = array();
 
     public function init()
     {
-        $this->nameSingular = __("{{BPREPLACESLUGCAMELCASE}}", 'modularity-{{BPREPLACESLUG}}');
-        $this->namePlural = __("{{BPREPLACESLUGCAMELCASE}}", 'modularity-{{BPREPLACESLUG}}');
-        $this->description = __("{{BPREPLACEDESCRIPTION}}", 'modularity-{{BPREPLACESLUG}}');
+        $this->nameSingular = __("Products", 'modularity-products');
+        $this->namePlural = __("Products", 'modularity-products');
+        $this->description = __("An addon for displaying products.", 'modularity-products');
     }
 
     /**
@@ -33,13 +33,11 @@ class {{BPREPLACESLUGCAMELCASE}} extends \Modularity\Module
             get_fields($this->ID)
         ));
 
-        //Translations
-        $data['lang'] = (object) array(
-            'info' => __(
-                "Hey! This is your new {{BPREPLACENAME}} module. Let's get going.",
-                'modularity-{{BPREPLACESLUG}}'
-            )
-        );
+        if (!empty($data['prices'])) {
+            foreach ($data['prices'] as &$price) {
+                $price['frequency'] = $this->showAsToFrequency($price['showAs']);
+            }
+        }
 
         return $data;
     }
@@ -50,7 +48,7 @@ class {{BPREPLACESLUGCAMELCASE}} extends \Modularity\Module
      */
     public function template(): string
     {
-        return "{{BPREPLACESLUG}}.blade.php";
+        return "products.blade.php";
     }
 
     /**
@@ -61,14 +59,14 @@ class {{BPREPLACESLUGCAMELCASE}} extends \Modularity\Module
     {
         //Register custom css
         wp_register_style(
-            'modularity-{{BPREPLACESLUG}}',
-            {{BPREPLACECAPSCONSTANT}}_URL . '/dist/' . CacheBust::name('css/modularity-{{BPREPLACESLUG}}.css'),
+            'modularity-products',
+            MODULARITY_PRODUCTS_URL . '/dist/' . CacheBust::name('css/modularity-products.css'),
             null,
             '1.0.0'
         );
 
         //Enqueue
-        wp_enqueue_style('modularity-{{BPREPLACESLUG}}');
+        wp_enqueue_style('modularity-products');
     }
 
     /**
@@ -79,14 +77,28 @@ class {{BPREPLACESLUGCAMELCASE}} extends \Modularity\Module
     {
         //Register custom css
         wp_register_script(
-            'modularity-{{BPREPLACESLUG}}',
-            {{BPREPLACECAPSCONSTANT}}_URL . '/dist/' . CacheBust::name('js/modularity-{{BPREPLACESLUG}}.js'),
+            'modularity-products',
+            MODULARITY_PRODUCTS_URL . '/dist/' . CacheBust::name('js/modularity-products.js'),
             null,
             '1.0.0'
         );
 
         //Enqueue
-        wp_enqueue_script('modularity-{{BPREPLACESLUG}}');
+        wp_enqueue_script('modularity-products');
+    }
+
+    private function showAsToFrequency($showAs)
+    {
+        switch ($showAs) {
+            case "mon":
+                return __('mon', 'modularity-products');
+            case "yr":
+                return __('yr', 'modularity-products');
+            case "pc":
+                return __('pc', 'modularity-products');
+            case "person":
+                return __('person', 'modularity-products');
+        }
     }
 
     /**
