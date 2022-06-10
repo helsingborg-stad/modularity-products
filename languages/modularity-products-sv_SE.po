@@ -1,0 +1,172 @@
+# Copyright (C) 2022 Freya Liljeberg
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: Modularity Products\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/modularity-"
+"products\n"
+"POT-Creation-Date: 2022-06-10 14:16+0200\n"
+"PO-Revision-Date: 2022-06-10 14:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Domain: mod-products\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: source/php/AcfFields/php/products-module.php:8
+msgid "Products module"
+msgstr "Produktmodul"
+
+#: source/php/AcfFields/php/products-module.php:12
+#: source/php/Module/Products.php:18 source/php/Module/Products.php:19
+msgid "Products"
+msgstr "Produkter"
+
+#: source/php/AcfFields/php/products-module.php:31
+msgid "Heading"
+msgstr "Rubrik"
+
+#: source/php/AcfFields/php/products-module.php:34
+msgid "The module heading"
+msgstr "Modulens rubrik"
+
+#: source/php/AcfFields/php/products-module.php:50
+msgid "Label"
+msgstr "Text"
+
+#: source/php/AcfFields/php/products-module.php:53
+msgid "Description of the product"
+msgstr "Beskrivning av produkten"
+
+#: source/php/AcfFields/php/products-module.php:69
+msgid "Prices"
+msgstr "Priser"
+
+#: source/php/AcfFields/php/products-module.php:88
+msgid "Amount"
+msgstr "Belopp"
+
+#: source/php/AcfFields/php/products-module.php:109
+msgid "Currency"
+msgstr "Valuta"
+
+#: source/php/AcfFields/php/products-module.php:120
+msgid "kr"
+msgstr ""
+
+#: source/php/AcfFields/php/products-module.php:128
+msgid "Show as"
+msgstr "Visa som"
+
+#: source/php/AcfFields/php/products-module.php:140
+msgid "Monthly"
+msgstr "Månatlig"
+
+#: source/php/AcfFields/php/products-module.php:141
+msgid "Annually"
+msgstr "Årligen"
+
+#: source/php/AcfFields/php/products-module.php:142
+msgid "Pieces"
+msgstr "Styckpris"
+
+#: source/php/AcfFields/php/products-module.php:143
+msgid "Person"
+msgstr "Person"
+
+#: source/php/AcfFields/php/products-module.php:145
+#: source/php/Module/Products.php:94
+msgid "mon"
+msgstr "mån"
+
+#: source/php/AcfFields/php/products-module.php:155
+msgid "Background colour"
+msgstr "Bakgrundsfärg"
+
+#: source/php/AcfFields/php/products-module.php:167
+#: source/php/AcfFields/php/products-module.php:171
+msgid "Primary"
+msgstr "Primär"
+
+#: source/php/AcfFields/php/products-module.php:168
+msgid "Secondary"
+msgstr "Sekundär"
+
+#: source/php/AcfFields/php/products-module.php:169
+msgid "None"
+msgstr "Ingen"
+
+#: source/php/AcfFields/php/products-module.php:183
+msgid "Image"
+msgstr "Bild"
+
+#: source/php/AcfFields/php/products-module.php:207
+msgid "Meta"
+msgstr "Meta"
+
+#: source/php/AcfFields/php/products-module.php:210
+msgid "Text displayed above bullet points"
+msgstr "Text som visas över punktlistan"
+
+#: source/php/AcfFields/php/products-module.php:226
+msgid "Bullet points"
+msgstr "Punklista"
+
+#: source/php/AcfFields/php/products-module.php:245
+msgid "label"
+msgstr "text"
+
+#: source/php/AcfFields/php/products-module.php:264
+msgid "href"
+msgstr "href"
+
+#: source/php/AcfFields/php/products-module.php:282
+msgid "Button"
+msgstr "Knapp"
+
+#: source/php/AcfFields/php/products-module.php:297
+msgid "Button label"
+msgstr "Knapptext"
+
+#: source/php/AcfFields/php/products-module.php:316
+msgid "Button link"
+msgstr "Knapplänk"
+
+#: source/php/AcfFields/php/products-module.php:334
+msgid "Featured"
+msgstr "Framhäv"
+
+#: source/php/Admin/Settings.php:20
+msgid "Modularity Products"
+msgstr ""
+
+#: source/php/Admin/Settings.php:21
+msgid "Modularity Products Settings"
+msgstr ""
+
+#: source/php/Module/Products.php:20
+msgid "An addon for displaying products."
+msgstr "Ett tillägg för att visa produkter."
+
+#: source/php/Module/Products.php:96
+msgid "yr"
+msgstr "år"
+
+#: source/php/Module/Products.php:98
+msgid "pc"
+msgstr "st"
+
+#: source/php/Module/Products.php:100
+msgid "person"
+msgstr "person"
