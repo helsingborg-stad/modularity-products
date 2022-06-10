@@ -237,8 +237,8 @@
                     "sub_fields": [
                         {
                             "key": "field_62a30d3e30171",
-                            "label": "label",
-                            "name": "Label",
+                            "label": "Label",
+                            "name": "label",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -256,8 +256,8 @@
                         },
                         {
                             "key": "field_62a30d4830172",
-                            "label": "href",
-                            "name": "Link",
+                            "label": "Link",
+                            "name": "href",
                             "type": "url",
                             "instructions": "",
                             "required": 0,

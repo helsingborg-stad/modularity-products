@@ -242,8 +242,8 @@ if (function_exists('acf_add_local_field_group')) {
                     'sub_fields' => array(
                         0 => array(
                             'key' => 'field_62a30d3e30171',
-                            'label' => __('label', 'modularity-products'),
-                            'name' => 'Label',
+                            'label' => __('Label', 'modularity-products'),
+                            'name' => 'label',
                             'type' => 'text',
                             'instructions' => '',
                             'required' => 0,
@@ -261,8 +261,8 @@ if (function_exists('acf_add_local_field_group')) {
                         ),
                         1 => array(
                             'key' => 'field_62a30d4830172',
-                            'label' => __('href', 'modularity-products'),
-                            'name' => 'Link',
+                            'label' => __('Link', 'modularity-products'),
+                            'name' => 'href',
                             'type' => 'url',
                             'instructions' => '',
                             'required' => 0,
