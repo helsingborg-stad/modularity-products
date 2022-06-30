@@ -12,22 +12,24 @@
         <div class="o-grid-{{ 12/count($products) }}">
             @product([
                 'heading' => $product['heading'],
+                'backgroundColor' => $product['backgroundColor'] ?? 'primary',
                 'label' => $product['label'],
                 'image' => [
                     'src' => $product['image']['url'],
-                    'alt' => $product['image']['alt'] ?? $product['image']['name'],
-                    'backgroundColor' => 'secondary'
+                    'alt' => $product['image']['alt'] ?? $product['image']['name']
                 ],
                 'meta' => $product['metaText'] ?? '',
                 'prices' => $product['prices'],
                 'bulletPoints' => $product['bulletPoints'],
                 'button' => [
                     'type' => 'filled',
-                    'color' => 'primary',
                     'text' => $product['button']['label'],
                     'href' => $product['button']['href']
                 ],
-                'featured' => $product['featured']
+                'featured' => $product['featured'],
+                'attributeList' => $product['backgroundColor'] === 'custom' ? [
+                    'style' => '--c-product-custom-color: ' . $product['customColor'] . ';'
+                ] : []
             ])
             @endproduct
         </div>

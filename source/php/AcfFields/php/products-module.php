@@ -1,9 +1,7 @@
 <?php 
 
-
-if (function_exists('acf_add_local_field_group')) {
-
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_62a30b29785f0',
     'title' => __('Products module', 'modularity-products'),
     'fields' => array(
@@ -46,6 +44,57 @@ if (function_exists('acf_add_local_field_group')) {
                     'maxlength' => '',
                 ),
                 1 => array(
+                    'key' => 'field_62bd9870be7e2',
+                    'label' => __('Background color', 'modularity-products'),
+                    'name' => 'background_color',
+                    'type' => 'select',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                        'primary' => __('Primary', 'modularity-products'),
+                        'secondary' => __('Secondary', 'modularity-products'),
+                        'custom' => __('Custom', 'modularity-products'),
+                    ),
+                    'default_value' => __('primary', 'modularity-products'),
+                    'allow_null' => 0,
+                    'multiple' => 0,
+                    'ui' => 0,
+                    'return_format' => 'value',
+                    'ajax' => 0,
+                    'placeholder' => '',
+                ),
+                2 => array(
+                    'key' => 'field_62bd98ba05426',
+                    'label' => __('Custom color', 'modularity-products'),
+                    'name' => 'custom_color',
+                    'type' => 'color_picker',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => array(
+                        0 => array(
+                            0 => array(
+                                'field' => 'field_62bd9870be7e2',
+                                'operator' => '==',
+                                'value' => 'custom',
+                            ),
+                        ),
+                    ),
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'enable_opacity' => 0,
+                    'return_format' => 'string',
+                ),
+                3 => array(
                     'key' => 'field_62a30c3233379',
                     'label' => __('Label', 'modularity-products'),
                     'name' => 'label',
@@ -64,7 +113,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'append' => '',
                     'maxlength' => '',
                 ),
-                2 => array(
+                4 => array(
                     'key' => 'field_62a30c6831f43',
                     'label' => __('Prices', 'modularity-products'),
                     'name' => 'prices',
@@ -178,7 +227,7 @@ if (function_exists('acf_add_local_field_group')) {
                         ),
                     ),
                 ),
-                3 => array(
+                5 => array(
                     'key' => 'field_62a30d133eecd',
                     'label' => __('Image', 'modularity-products'),
                     'name' => 'image',
@@ -202,7 +251,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'max_size' => '',
                     'mime_types' => '',
                 ),
-                4 => array(
+                6 => array(
                     'key' => 'field_62a314d65409b',
                     'label' => __('Meta', 'modularity-products'),
                     'name' => 'meta_text',
@@ -221,7 +270,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'append' => '',
                     'maxlength' => '',
                 ),
-                5 => array(
+                7 => array(
                     'key' => 'field_62a30d2530170',
                     'label' => __('Bullet points', 'modularity-products'),
                     'name' => 'bullet-points',
@@ -277,7 +326,7 @@ if (function_exists('acf_add_local_field_group')) {
                         ),
                     ),
                 ),
-                6 => array(
+                8 => array(
                     'key' => 'field_62a30d6bda2a4',
                     'label' => __('Button', 'modularity-products'),
                     'name' => 'button',
@@ -329,7 +378,7 @@ if (function_exists('acf_add_local_field_group')) {
                         ),
                     ),
                 ),
-                7 => array(
+                9 => array(
                     'key' => 'field_62a30eb1493b9',
                     'label' => __('Featured', 'modularity-products'),
                     'name' => 'featured',
@@ -377,5 +426,4 @@ if (function_exists('acf_add_local_field_group')) {
     'description' => '',
     'show_in_rest' => 0,
 ));
-
-}
+}
