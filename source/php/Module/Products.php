@@ -33,9 +33,11 @@ class Products extends \Modularity\Module
             get_fields($this->ID)
         ));
 
-        if (!empty($data['prices'])) {
-            foreach ($data['prices'] as &$price) {
-                $price['frequency'] = $this->showAsToFrequency($price['showAs']);
+        foreach ($data['products'] as &$product) {
+            if (!empty($product['prices'])) {
+                foreach ($product['prices'] as &$price) {
+                    $price['frequency'] = $this->showAsToFrequency($price['showAs']);
+                }
             }
         }
 
