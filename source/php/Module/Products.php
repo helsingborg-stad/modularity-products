@@ -39,6 +39,10 @@ class Products extends \Modularity\Module
                     $price['frequency'] = $this->showAsToFrequency($price['showAs']);
                 }
             }
+
+            if (!empty($product['image'])) {
+                $product['image']['url'] = wp_get_attachment_image_url($product['image']['id'], [128, 128]);
+            }
         }
 
         return $data;
