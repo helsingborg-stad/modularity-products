@@ -9,7 +9,7 @@
 
 <div class="o-grid modularity-products-container">
     @foreach ($products as $product)
-        <div class="o-grid-{{ 12/count($products) }}">
+        <div class="o-grid-{{ 12/count($products) }}@md">
             @product([
                 'heading' => $product['heading'],
                 'backgroundColor' => $product['backgroundColor'] ?? 'primary',
