@@ -57,42 +57,6 @@ class Products extends \Modularity\Module
         return "products.blade.php";
     }
 
-    /**
-     * Style - Register & adding css
-     * @return void
-     */
-    public function style()
-    {
-        //Register custom css
-        wp_register_style(
-            'modularity-products',
-            MODULARITY_PRODUCTS_URL . '/dist/' . CacheBust::name('css/modularity-products.css'),
-            null,
-            '1.0.0'
-        );
-
-        //Enqueue
-        wp_enqueue_style('modularity-products');
-    }
-
-    /**
-     * Script - Register & adding scripts
-     * @return void
-     */
-    public function script()
-    {
-        //Register custom css
-        wp_register_script(
-            'modularity-products',
-            MODULARITY_PRODUCTS_URL . '/dist/' . CacheBust::name('js/modularity-products.js'),
-            null,
-            '1.0.0'
-        );
-
-        //Enqueue
-        wp_enqueue_script('modularity-products');
-    }
-
     private function showAsToFrequency($showAs)
     {
         switch ($showAs) {
