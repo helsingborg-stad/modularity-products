@@ -43,6 +43,12 @@ class Products extends \Modularity\Module
             if (!empty($product['image'])) {
                 $product['image']['url'] = wp_get_attachment_image_url($product['image']['id'], [128, 128]);
             }
+
+            if (!empty($product['button']) && !empty($product['button']['label'])) {
+                $product['button']['text'] = $product['button']['label'];
+            } else {
+                $product['button'] = false;
+            }
         }
 
         return $data;
