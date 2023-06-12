@@ -34,9 +34,21 @@ class Products extends \Modularity\Module
         ));
 
         foreach ($data['products'] as &$product) {
+            
+        foreach ($product['bulletPoints'] as &$bulletPoint) {
+            $bulletPoint['icon']['src'] = 'check_circle';
+            $bulletPoint['size'] = 'sm';
+        }
+
             if (!empty($product['prices'])) {
                 foreach ($product['prices'] as &$price) {
-                    $price['frequency'] = $this->showAsToFrequency($price['showAs']);
+                    if (empty($price['amount']) || $price['amount'] == 0) {
+                        $price['amount'] = __('Free', 'modularity-products');
+                        $price['currency'] = false;
+                        $price['frequency'] = false;
+                    } else {
+                        $price['frequency'] = $this->showAsToFrequency($price['showAs']);
+                    }
                 }
             }
 
