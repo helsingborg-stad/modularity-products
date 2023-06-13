@@ -21,11 +21,7 @@
                 'meta' => $product['metaText'] ?? '',
                 'prices' => $product['prices'],
                 'bulletPoints' => $product['bulletPoints'],
-                'button' => [
-                    'type' => 'filled',
-                    'text' => $product['button']['label'],
-                    'href' => $product['button']['href']
-                ],
+                'button' => $product['button'],
                 'featured' => $product['featured'],
                 'attributeList' => $product['backgroundColor'] === 'custom' ? [
                     'style' => '--c-product-custom-color: ' . $product['customColor'] . ';'
