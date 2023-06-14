@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Modularity Products\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/modularity-"
 "products\n"
-"POT-Creation-Date: 2022-06-10 15:11+0200\n"
-"PO-Revision-Date: 2022-06-10 15:11+0200\n"
+"POT-Creation-Date: 2023-06-14 16:52+0200\n"
+"PO-Revision-Date: 2023-06-14 16:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Domain: mod-products\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -42,105 +42,125 @@ msgid "The module heading"
 msgstr "Modulens rubrik"
 
 #: source/php/AcfFields/php/products-module.php:48
-#: source/php/AcfFields/php/products-module.php:243
-msgid "Label"
-msgstr "Text"
-
-#: source/php/AcfFields/php/products-module.php:51
-msgid "Description of the product"
-msgstr "Beskrivning av produkten"
-
-#: source/php/AcfFields/php/products-module.php:67
-msgid "Prices"
-msgstr "Priser"
-
-#: source/php/AcfFields/php/products-module.php:86
-msgid "Amount"
-msgstr "Belopp"
-
-#: source/php/AcfFields/php/products-module.php:107
-msgid "Currency"
-msgstr "Valuta"
-
-#: source/php/AcfFields/php/products-module.php:118
-msgid "kr"
-msgstr ""
-
-#: source/php/AcfFields/php/products-module.php:126
-msgid "Show as"
-msgstr "Visa som"
-
-#: source/php/AcfFields/php/products-module.php:138
-msgid "Monthly"
-msgstr "Månatlig"
-
-#: source/php/AcfFields/php/products-module.php:139
-msgid "Annually"
-msgstr "Årligen"
-
-#: source/php/AcfFields/php/products-module.php:140
-msgid "Pieces"
-msgstr "Styckpris"
-
-#: source/php/AcfFields/php/products-module.php:141
-msgid "Person"
-msgstr "Person"
-
-#: source/php/AcfFields/php/products-module.php:143
-#: source/php/Module/Products.php:94
-msgid "mon"
-msgstr "mån"
-
-#: source/php/AcfFields/php/products-module.php:153
-msgid "Background colour"
+#, fuzzy
+#| msgid "Background colour"
+msgid "Background color"
 msgstr "Bakgrundsfärg"
 
-#: source/php/AcfFields/php/products-module.php:165
-#: source/php/AcfFields/php/products-module.php:169
+#: source/php/AcfFields/php/products-module.php:60
+#: source/php/AcfFields/php/products-module.php:216
+#: source/php/AcfFields/php/products-module.php:220
 msgid "Primary"
 msgstr "Primär"
 
-#: source/php/AcfFields/php/products-module.php:166
+#: source/php/AcfFields/php/products-module.php:61
+#: source/php/AcfFields/php/products-module.php:217
 msgid "Secondary"
 msgstr "Sekundär"
 
-#: source/php/AcfFields/php/products-module.php:167
+#: source/php/AcfFields/php/products-module.php:62
+msgid "Custom"
+msgstr "Anpassad"
+
+#: source/php/AcfFields/php/products-module.php:64
+msgid "primary"
+msgstr "primär"
+
+#: source/php/AcfFields/php/products-module.php:74
+msgid "Custom color"
+msgstr "Anpassad färg"
+
+#: source/php/AcfFields/php/products-module.php:99
+#: source/php/AcfFields/php/products-module.php:294
+msgid "Label"
+msgstr "Text"
+
+#: source/php/AcfFields/php/products-module.php:102
+msgid "Description of the product"
+msgstr "Beskrivning av produkten"
+
+#: source/php/AcfFields/php/products-module.php:118
+msgid "Prices"
+msgstr "Priser"
+
+#: source/php/AcfFields/php/products-module.php:137
+msgid "Amount"
+msgstr "Belopp"
+
+#: source/php/AcfFields/php/products-module.php:158
+msgid "Currency"
+msgstr "Valuta"
+
+#: source/php/AcfFields/php/products-module.php:169
+msgid "kr"
+msgstr "kr"
+
+#: source/php/AcfFields/php/products-module.php:177
+msgid "Show as"
+msgstr "Visa som"
+
+#: source/php/AcfFields/php/products-module.php:189
+msgid "Monthly"
+msgstr "Månatlig"
+
+#: source/php/AcfFields/php/products-module.php:190
+msgid "Annually"
+msgstr "Årligen"
+
+#: source/php/AcfFields/php/products-module.php:191
+msgid "Pieces"
+msgstr "Styckpris"
+
+#: source/php/AcfFields/php/products-module.php:192
+msgid "Person"
+msgstr "Person"
+
+#: source/php/AcfFields/php/products-module.php:194
+#: source/php/Module/Products.php:82
+msgid "mon"
+msgstr "mån"
+
+#: source/php/AcfFields/php/products-module.php:204
+msgid "Background colour"
+msgstr "Bakgrundsfärg"
+
+#: source/php/AcfFields/php/products-module.php:218
 msgid "None"
 msgstr "Ingen"
 
-#: source/php/AcfFields/php/products-module.php:181
+#: source/php/AcfFields/php/products-module.php:232
 msgid "Image"
 msgstr "Bild"
 
-#: source/php/AcfFields/php/products-module.php:205
+#: source/php/AcfFields/php/products-module.php:256
 msgid "Meta"
 msgstr "Meta"
 
-#: source/php/AcfFields/php/products-module.php:208
+#: source/php/AcfFields/php/products-module.php:259
 msgid "Text displayed above bullet points"
 msgstr "Text som visas över punktlistan"
 
-#: source/php/AcfFields/php/products-module.php:224
+#: source/php/AcfFields/php/products-module.php:275
 msgid "Bullet points"
 msgstr "Punklista"
 
-#: source/php/AcfFields/php/products-module.php:262
+#: source/php/AcfFields/php/products-module.php:313
 msgid "Link"
 msgstr "Länk"
 
-#: source/php/AcfFields/php/products-module.php:280
+#: source/php/AcfFields/php/products-module.php:331
 msgid "Button"
 msgstr "Knapp"
 
-#: source/php/AcfFields/php/products-module.php:295
+#: source/php/AcfFields/php/products-module.php:346
 msgid "Button label"
 msgstr "Knapptext"
 
-#: source/php/AcfFields/php/products-module.php:314
+#: source/php/AcfFields/php/products-module.php:365
 msgid "Button link"
 msgstr "Knapplänk"
 
-#: source/php/AcfFields/php/products-module.php:332
+#: source/php/AcfFields/php/products-module.php:383
 msgid "Featured"
 msgstr "Framhäv"
 
@@ -156,15 +176,19 @@ msgstr ""
 msgid "An addon for displaying products."
 msgstr "Ett tillägg för att visa produkter."
 
-#: source/php/Module/Products.php:96
+#: source/php/Module/Products.php:46
+msgid "Free"
+msgstr "Gratis"
+
+#: source/php/Module/Products.php:84
 msgid "yr"
 msgstr "år"
 
-#: source/php/Module/Products.php:98
+#: source/php/Module/Products.php:86
 msgid "pc"
 msgstr "st"
 
-#: source/php/Module/Products.php:100
+#: source/php/Module/Products.php:88
 msgid "person"
 msgstr "person"
 
