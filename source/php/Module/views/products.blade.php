@@ -7,7 +7,7 @@
     @endtypography
 @endif
 
-<div class="o-grid modularity-products-container">
+<div class="o-grid modularity-products-container u-height--100">
     @foreach ($products as $product)
         <div class="o-grid-{{ 12/count($products) }}@md">
             @product([
