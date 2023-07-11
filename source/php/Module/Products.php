@@ -74,7 +74,6 @@ class Products extends \Modularity\Module
     }
 
     private function getFreePrice($price) {
-        echo '<pre>' . print_r( $price, true ) . '</pre>';
         if ($price['noCostText']) {
             $price['amount'] = $price['noCostText'];
         } else {
