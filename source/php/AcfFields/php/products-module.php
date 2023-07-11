@@ -22,7 +22,8 @@
             'min' => 0,
             'max' => 0,
             'layout' => 'block',
-            'button_label' => '',
+            'button_label' => __('Add Row', 'modularity-products'),
+            'rows_per_page' => 20,
             'sub_fields' => array(
                 0 => array(
                     'key' => 'field_62a30b3dd22dc',
@@ -42,6 +43,7 @@
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 1 => array(
                     'key' => 'field_62bd9870be7e2',
@@ -68,6 +70,7 @@
                     'return_format' => 'value',
                     'ajax' => 0,
                     'placeholder' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 2 => array(
                     'key' => 'field_62bd98ba05426',
@@ -93,6 +96,7 @@
                     'default_value' => '',
                     'enable_opacity' => 0,
                     'return_format' => 'string',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 3 => array(
                     'key' => 'field_62a30c3233379',
@@ -112,6 +116,7 @@
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 4 => array(
                     'key' => 'field_62a30c6831f43',
@@ -130,7 +135,8 @@
                     'min' => 1,
                     'max' => 2,
                     'layout' => 'table',
-                    'button_label' => '',
+                    'button_label' => __('Add Row', 'modularity-products'),
+                    'rows_per_page' => 20,
                     'sub_fields' => array(
                         0 => array(
                             'key' => 'field_62a30c8f31f44',
@@ -141,17 +147,18 @@
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
-                                'width' => '',
+                                'width' => '20',
                                 'class' => '',
                                 'id' => '',
                             ),
                             'default_value' => '',
-                            'placeholder' => '',
-                            'prepend' => '',
-                            'append' => '',
                             'min' => '',
                             'max' => '',
+                            'placeholder' => '',
                             'step' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'parent_repeater' => 'field_62a30c6831f43',
                         ),
                         1 => array(
                             'key' => 'field_62a30caa31f45',
@@ -162,15 +169,16 @@
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
-                                'width' => '',
+                                'width' => '20',
                                 'class' => '',
                                 'id' => '',
                             ),
                             'default_value' => __('kr', 'modularity-products'),
+                            'maxlength' => '',
                             'placeholder' => '',
                             'prepend' => '',
                             'append' => '',
-                            'maxlength' => '',
+                            'parent_repeater' => 'field_62a30c6831f43',
                         ),
                         2 => array(
                             'key' => 'field_62a30cb131f46',
@@ -181,7 +189,7 @@
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
-                                'width' => '',
+                                'width' => '20',
                                 'class' => '',
                                 'id' => '',
                             ),
@@ -192,14 +200,35 @@
                                 'person' => __('Person', 'modularity-products'),
                             ),
                             'default_value' => __('mon', 'modularity-products'),
-                            'allow_null' => 0,
-                            'multiple' => 0,
-                            'ui' => 0,
                             'return_format' => 'value',
+                            'multiple' => 0,
+                            'allow_null' => 0,
+                            'ui' => 0,
                             'ajax' => 0,
                             'placeholder' => '',
+                            'parent_repeater' => 'field_62a30c6831f43',
                         ),
                         3 => array(
+                            'key' => 'field_64ad194a2e738',
+                            'label' => __('No cost text', 'modularity-products'),
+                            'name' => 'no_cost_text',
+                            'type' => 'text',
+                            'instructions' => __('The text shown when the product is free (Amount has no value or the value is equal to 0).', 'modularity-products'),
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '20',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'parent_repeater' => 'field_62a30c6831f43',
+                        ),
+                        4 => array(
                             'key' => 'field_62a30cd531f47',
                             'label' => __('Background colour', 'modularity-products'),
                             'name' => 'background_color',
@@ -208,7 +237,7 @@
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
-                                'width' => '',
+                                'width' => '20',
                                 'class' => '',
                                 'id' => '',
                             ),
@@ -218,14 +247,16 @@
                                 'none' => __('None', 'modularity-products'),
                             ),
                             'default_value' => __('Primary', 'modularity-products'),
-                            'allow_null' => 0,
-                            'multiple' => 0,
-                            'ui' => 0,
                             'return_format' => 'value',
+                            'multiple' => 0,
+                            'allow_null' => 0,
+                            'ui' => 0,
                             'ajax' => 0,
                             'placeholder' => '',
+                            'parent_repeater' => 'field_62a30c6831f43',
                         ),
                     ),
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 5 => array(
                     'key' => 'field_62a30d133eecd',
@@ -250,6 +281,7 @@
                     'max_height' => '',
                     'max_size' => '',
                     'mime_types' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 6 => array(
                     'key' => 'field_62a314d65409b',
@@ -269,6 +301,7 @@
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 7 => array(
                     'key' => 'field_62a30d2530170',
@@ -287,7 +320,8 @@
                     'min' => 0,
                     'max' => 0,
                     'layout' => 'table',
-                    'button_label' => '',
+                    'button_label' => __('Add Row', 'modularity-products'),
+                    'rows_per_page' => 20,
                     'sub_fields' => array(
                         0 => array(
                             'key' => 'field_62a30d3e30171',
@@ -307,6 +341,7 @@
                             'prepend' => '',
                             'append' => '',
                             'maxlength' => '',
+                            'parent_repeater' => 'field_62a30d2530170',
                         ),
                         1 => array(
                             'key' => 'field_62a30d4830172',
@@ -323,8 +358,10 @@
                             ),
                             'default_value' => '',
                             'placeholder' => '',
+                            'parent_repeater' => 'field_62a30d2530170',
                         ),
                     ),
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 8 => array(
                     'key' => 'field_62a30d6bda2a4',
@@ -377,6 +414,7 @@
                             'placeholder' => '',
                         ),
                     ),
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
                 9 => array(
                     'key' => 'field_62a30eb1493b9',
@@ -396,6 +434,7 @@
                     'ui' => 0,
                     'ui_on_text' => '',
                     'ui_off_text' => '',
+                    'parent_repeater' => 'field_62a3176ec4838',
                 ),
             ),
         ),
@@ -425,5 +464,10 @@
     'active' => true,
     'description' => '',
     'show_in_rest' => 0,
+    'acfe_display_title' => '',
+    'acfe_autosync' => '',
+    'acfe_form' => 0,
+    'acfe_meta' => '',
+    'acfe_note' => '',
 ));
 }

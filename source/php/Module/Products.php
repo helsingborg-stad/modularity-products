@@ -43,9 +43,7 @@ class Products extends \Modularity\Module
             if (!empty($product['prices'])) {
                 foreach ($product['prices'] as &$price) {
                     if (empty($price['amount']) || $price['amount'] == 0) {
-                        $price['amount'] = __('Free', 'modularity-products');
-                        $price['currency'] = false;
-                        $price['frequency'] = false;
+                        $price = $this->getFreePrice($price);
                     } else {
                         $price['frequency'] = $this->showAsToFrequency($price['showAs']);
                     }
@@ -73,6 +71,19 @@ class Products extends \Modularity\Module
     public function template(): string
     {
         return "products.blade.php";
+    }
+
+    private function getFreePrice($price) {
+        echo '<pre>' . print_r( $price, true ) . '</pre>';
+        if ($price['noCostText']) {
+            $price['amount'] = $price['noCostText'];
+        } else {
+            $price['amount'] = __('Free', 'modularity-products');
+        }
+        $price['currency'] = false;
+        $price['frequency'] = false;
+        
+        return $price;
     }
 
     private function showAsToFrequency($showAs)
