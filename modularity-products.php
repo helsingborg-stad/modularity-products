@@ -27,14 +27,11 @@ define('MODULARITY_PRODUCTS_MODULE_PATH', MODULARITY_PRODUCTS_PATH . 'source/php
 
 load_plugin_textdomain('modularity-products', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
-require_once MODULARITY_PRODUCTS_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
+// Autoload from plugin
+if (file_exists(MODULARITY_PRODUCTS_PATH . 'vendor/autoload.php')) {
+    require_once MODULARITY_PRODUCTS_PATH . 'vendor/autoload.php';
+}
 require_once MODULARITY_PRODUCTS_PATH . 'Public.php';
-
-// Instantiate and register the autoloader
-$loader = new ModularityProducts\Vendor\Psr4ClassLoader();
-$loader->addPrefix('ModularityProducts', MODULARITY_PRODUCTS_PATH);
-$loader->addPrefix('ModularityProducts', MODULARITY_PRODUCTS_PATH . 'source/php/');
-$loader->register();
 
 // Acf auto import and export
 $acfExportManager = new \AcfExportManager\AcfExportManager();
