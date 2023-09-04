@@ -34,13 +34,15 @@ if (file_exists(MODULARITY_PRODUCTS_PATH . 'vendor/autoload.php')) {
 require_once MODULARITY_PRODUCTS_PATH . 'Public.php';
 
 // Acf auto import and export
-$acfExportManager = new \AcfExportManager\AcfExportManager();
-$acfExportManager->setTextdomain('modularity-products');
-$acfExportManager->setExportFolder(MODULARITY_PRODUCTS_PATH . 'source/php/AcfFields/');
-$acfExportManager->autoExport(array(
-    'products-module' => 'group_62a30b29785f0', //Update with acf id here, module view
-));
-$acfExportManager->import();
+add_action('acf/init', function () {
+    $acfExportManager = new \AcfExportManager\AcfExportManager();
+    $acfExportManager->setTextdomain('modularity-products');
+    $acfExportManager->setExportFolder(MODULARITY_PRODUCTS_PATH . 'source/php/AcfFields/');
+    $acfExportManager->autoExport(array(
+        'products-module' => 'group_62a30b29785f0', //Update with acf id here, module view
+    ));
+    $acfExportManager->import();
+});
 
 // Modularity 3.0 ready - ViewPath for Component library
 add_filter('/Modularity/externalViewPath', function ($arr) {
