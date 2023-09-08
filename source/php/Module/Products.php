@@ -34,11 +34,12 @@ class Products extends \Modularity\Module
         ));
 
         foreach ($data['products'] as &$product) {
-            
-        foreach ($product['bulletPoints'] as &$bulletPoint) {
-            $bulletPoint['icon']['src'] = 'check_circle';
-            $bulletPoint['size'] = 'sm';
-        }
+            if (!empty($product['bulletPoints'])) {
+                foreach ($product['bulletPoints'] as &$bulletPoint) {
+                    $bulletPoint['icon']['src'] = 'check_circle';
+                    $bulletPoint['size'] = 'sm';
+                }
+            }
 
             if (!empty($product['prices'])) {
                 foreach ($product['prices'] as &$price) {
