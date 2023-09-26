@@ -10,7 +10,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": [],
     "repositories": [
         {
             "type": "vcs",
@@ -19,7 +19,8 @@
     ],
     "autoload": {
         "psr-4": {
-          "ModularityProducts\\": "source/php/"
+            "ModularityProducts\\": "source/php/"
         }
-    }
+    },
+    "version": "1.0.0"
 }
