@@ -1,22 +1,17 @@
 <?php
 
-use HelsingborgStad\GlobalBladeService\GlobalBladeService;
+use ComponentLibrary\Init;
 
 if (!function_exists('modularity_products_render_blade_view')) {
     function modularity_products_render_blade_view($view, $data = [], $compress = true)
     {
-        $bladeEngine = GlobalBladeService::getInstance([
-            MODULARITY_PRODUCTS_MODULE_VIEW_PATH
-        ]);
+        $componentLibrary = new Init([]);
+        $bladeEngine = $componentLibrary->getEngine();
+        $viewPath = MODULARITY_PRODUCTS_MODULE_VIEW_PATH;
+        $data = array_merge($data, array('errorMessage' => false));
 
         try {
-            $markup = $bladeEngine->makeView(
-                $view,
-                array_merge(
-                    $data,
-                    array('errorMessage' => false)
-                )
-            )->render();
+            $markup = $bladeEngine->makeView($view, $data, [], $viewPath)->render();
         } catch (\Throwable $e) {
             $markup .= '<pre style="border: 3px solid #f00; padding: 10px;">';
             $markup .= '<strong>' . $e->getMessage() . '</strong>';
