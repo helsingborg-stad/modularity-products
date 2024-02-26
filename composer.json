@@ -11,12 +11,6 @@
     ],
     "minimum-stability": "stable",
     "require": {},
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/modularity-products.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "ModularityProducts\\": "source/php/"
