@@ -1,4 +1,4 @@
-@if (!$hideTitle)
+@if (!$hideTitle && !empty($postTitle))
     @typography([
         'element' => 'h2',
         'classList' => ['u-margin--0']
