@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: 'https://npm.pkg.github.com/helsingborg-stad'
       - name: Inject access token in .npmrc
         run: | 
           echo "registry=https://npm.pkg.github.com/helsingborg-stad" >> ~/.npmrc
@@ -57,7 +57,7 @@ jobs:
         if: ${{ hashFiles('package-lock.json') != '' && hashFiles('gulp.js') != '' }}
         run: gulp
       - name: Publish npm package to GHCR
-        run: npm publish --registry=https://npm.pkg.github.com/ --access public
+        run: npm publish --registry=https://npm.pkg.github.com/helsingborg-stad --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create assets zip
