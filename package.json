@@ -23,6 +23,9 @@
         "> 1%",
         "not dead"
     ],
+    "files": [
+        "./dist"
+    ],
     "devDependencies": {
         "autoprefixer": "^10.4.2",
         "clean-webpack-plugin": "^4.0.0",
