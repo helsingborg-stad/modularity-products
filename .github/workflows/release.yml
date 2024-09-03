@@ -57,7 +57,7 @@ jobs:
         if: ${{ hashFiles('package-lock.json') != '' && hashFiles('gulp.js') != '' }}
         run: gulp
       - name: Publish npm package to GHCR
-        run: npm publish --registry=https://npm.pkg.github.com/ --provenance --access public
+        run: npm publish --registry=https://npm.pkg.github.com/ --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create assets zip
