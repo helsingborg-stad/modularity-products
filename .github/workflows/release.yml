@@ -38,7 +38,7 @@ jobs:
       - name: Update version in package.json
         run: |
           # Read the latest release version from environment variable
-          LATEST_VERSION="${env.LATEST_RELEASE}"
+          LATEST_VERSION="${{ env.LATEST_RELEASE }}"
 
           # Update the "version" field in package.json using jq
           jq --arg version "$LATEST_VERSION" '.version = $version' package.json > temp.json && mv temp.json package.json
