@@ -4,7 +4,7 @@
  * Plugin Name:       Modularity Products
  * Plugin URI:        https://github.com/helsingborg-stad/modularity-products
  * Description:       An addon for displaying products.
- * Version: 4.0.0
+ * Version: 4.0.1
  * Author:            Freya Liljeberg
  * Author URI:        https://github.com/helsingborg-stad
  * License:           MIT
