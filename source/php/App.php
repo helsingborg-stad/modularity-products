@@ -1,19 +1,18 @@
 <?php
 
-namespace ModularityProducts;
+declare(strict_types=1);
 
-use ModularityProducts\Helper\CacheBust;
+namespace ModularityProducts;
 
 class App
 {
     public function __construct()
     {
-
         //Init subset
         new Admin\Settings();
 
         //Register module
-        add_action('init', array($this, 'registerModule'));
+        add_action('init', [$this, 'registerModule']);
     }
 
     /**
@@ -25,7 +24,7 @@ class App
         if (function_exists('modularity_register_module')) {
             modularity_register_module(
                 MODULARITY_PRODUCTS_MODULE_PATH,
-                'Products'
+                'Products',
             );
         }
     }

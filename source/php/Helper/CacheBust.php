@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularityProducts\Helper;
 
 class CacheBust
@@ -27,9 +29,10 @@ class CacheBust
      */
     public static function getRevManifest()
     {
-        $jsonPath = MODULARITY_PRODUCTS_PATH . apply_filters(
+        $jsonPath = MODULARITY_PRODUCTS_PATH
+        . apply_filters(
             'ModularityProducts/Helper/CacheBust/RevManifestPath',
-            'dist/manifest.json'
+            'dist/manifest.json',
         );
 
         if (file_exists($jsonPath)) {

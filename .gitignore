@@ -42,6 +42,10 @@ Thumbs.db
 # ignore dist folder
 dist/
 dist
+/assets/
+
+phpunit-log.xml
+phpunit-testdox.txt
 
 # -------------------------
 # BEGIN Whitelisted Files
@@ -50,3 +54,5 @@ dist
 # track these files, if they exist
 !.gitignore
 !.editorconfig
+!.vscode
+

@@ -1,8 +1,8 @@
 <?php
 
-namespace ModularityProducts\Module;
+declare(strict_types=1);
 
-use ModularityProducts\Helper\CacheBust;
+namespace ModularityProducts\Module;
 
 /**
  * Class Products
@@ -11,13 +11,13 @@ use ModularityProducts\Helper\CacheBust;
 class Products extends \Modularity\Module
 {
     public $slug = 'products';
-    public $supports = array();
+    public $supports = [];
 
     public function init()
     {
-        $this->nameSingular = __("Products", 'modularity-products');
-        $this->namePlural = __("Products", 'modularity-products');
-        $this->description = __("An addon for displaying products.", 'modularity-products');
+        $this->nameSingular = __('Products', 'modularity-products');
+        $this->namePlural = __('Products', 'modularity-products');
+        $this->description = __('An addon for displaying products.', 'modularity-products');
     }
 
     /**
@@ -26,11 +26,11 @@ class Products extends \Modularity\Module
      */
     public function data(): array
     {
-        $data = array();
+        $data = [];
 
         //Append field config
         $data = array_merge($data, (array) \Modularity\Helper\FormatObject::camelCase(
-            get_fields($this->ID)
+            get_fields($this->ID),
         ));
 
         foreach ($data['products'] as &$product) {
@@ -65,10 +65,11 @@ class Products extends \Modularity\Module
      */
     public function template(): string
     {
-        return "products.blade.php";
+        return 'products.blade.php';
     }
 
-    private function getFreePrice($price) {
+    private function getFreePrice($price)
+    {
         if ($price['noCostText']) {
             $price['amount'] = $price['noCostText'];
         } else {
@@ -76,20 +77,20 @@ class Products extends \Modularity\Module
         }
         $price['currency'] = false;
         $price['frequency'] = false;
-        
+
         return $price;
     }
 
     private function showAsToFrequency($showAs)
     {
         switch ($showAs) {
-            case "mon":
+            case 'mon':
                 return __('mon', 'modularity-products');
-            case "yr":
+            case 'yr':
                 return __('yr', 'modularity-products');
-            case "pc":
+            case 'pc':
                 return __('pc', 'modularity-products');
-            case "person":
+            case 'person':
                 return __('person', 'modularity-products');
         }
     }
